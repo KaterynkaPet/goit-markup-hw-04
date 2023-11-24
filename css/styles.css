@@ -105,7 +105,8 @@ body {
  /*=========== HEADER STYLE ==========*/
 
  .page-header {
-    border-bottom: 1px solid #e7e9fc
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
  }
  .header-container {
     display: flex;
@@ -147,12 +148,20 @@ body {
     padding-bottom: 24px;
     color: #2E2F42;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
  }
- 
+ .studio {
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
 .studio::after {
     display: block;
     width: 48px;
     height: 4px;
+    left: 0;
+    bottom: -1px;
     border-radius: 2px;
     background-color: #404BBF;
     margin-top: 20px;
@@ -165,6 +174,7 @@ body {
     display: block;
     color: #434455;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
  }
 
@@ -194,14 +204,18 @@ body {
             rgba(46, 47, 66, 0.7)),
             url(../images/people-office.jpg);
     background-size: cover;
-    max-width: 1440рх;
-   
+    max-width: 1440px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 .main-title {
     font-weight: 700;
@@ -250,10 +264,12 @@ body {
 
 .list-advantages {
     display: flex;
+    
 }  
 
 .adventages-card {
     width: calc((100% - 72px) / 4);
+    
 }
 
 .adventages-card:not(:last-child) {
@@ -285,6 +301,9 @@ body {
 .list-team {
     display: flex;
     gap: 24px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-list {    
@@ -336,6 +355,11 @@ body {
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #404bbf;
+}
 /*=========== /TEAM STYLE ==========*/
 
 /*=========== PORTFOLIO STYLE ==========*/
@@ -349,6 +373,7 @@ body {
     row-gap: 48px;
     flex-wrap: wrap;
     margin-top: 72px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-item {
     width: calc((100% - 48px) / 3);
@@ -376,28 +401,29 @@ body {
     position: relative;
 }
 .overlay {
+    color: #F4F4FD;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    
     position: absolute;
     top: 0;
     left: 0;
     background-color: #4D5AE5;
     width: 100%;
     height: 100%;
-    padding: 40px 32px 164px;
+    padding: 40px 32px;
     overflow: auto;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(200%);
-    transition: transform 250ms linear;
+    
 }
 .overlay-box:hover .overlay {
     transform: translateY(0%);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.overlay p {
-    color: #F4F4FD;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    
-        
-}
+
 /*=========== /PORTFOLIO STYLE ==========*/
 
 /*=========== FOOTER STYLE ==========*/
@@ -411,7 +437,7 @@ body {
     align-items: baseline;
 }
 .logo-footer-container {
-
+    margin-right: 120px
 }
 .logo-footer {
     display: inline-block;
@@ -438,14 +464,14 @@ body {
 .social-container {
     display: flex;
     flex-direction: column;
-    margin-left: 120px;
+    
 }
 .footer-paragraph {
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
-        
+        margin-bottom: 16px;
         color: #ffffff;
 }
 .social-link-footer {
