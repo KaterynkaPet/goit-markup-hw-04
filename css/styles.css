@@ -257,12 +257,11 @@ body {
 .advantages {
     background-color: #FFFFFF;
 }
-.advantages-container {
-    display: flex;
+.adventages-container {
     justify-content: center;
 }
 
-.list-advantages {
+.list-adventages {
     display: flex;
     
 }  
@@ -301,15 +300,16 @@ body {
 .list-team {
     display: flex;
     gap: 24px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-            0px 1px 1px rgba(46, 47, 66, 0.16),
-            0px 2px 1px rgba(46, 47, 66, 0.08);
+    
 }
 
 .card-list {    
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
     background-color: #FFFFFF;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-team {
@@ -373,11 +373,11 @@ body {
     row-gap: 48px;
     flex-wrap: wrap;
     margin-top: 72px;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .portfolio-list-item {
     width: calc((100% - 48px) / 3);
-   
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .card-portfolio {
@@ -399,6 +399,7 @@ body {
     width: 360px;
     height: 300px;
     position: relative;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overlay {
     color: #F4F4FD;
